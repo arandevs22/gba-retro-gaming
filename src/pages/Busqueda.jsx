@@ -11,7 +11,7 @@ export const Busqueda = () => {
                             Buscar
                         </Typography>
                         <Link href="http://action_search" color='inherit'>
-                            <SearchIcon />
+                            <SearchIcon sx={{ fontSize: 30 }} />
                         </Link>
                     </Toolbar>
                 </AppBar>
