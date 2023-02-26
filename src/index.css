@@ -15,3 +15,8 @@ html {
 .MuiBottomNavigationAction-root.Mui-selected {
     color: #fff !important;
 }
+
+.MuiPaper-root.MuiAppBar-root {
+    background-color: #121212 !important;
+    box-shadow: none !important;
+}
