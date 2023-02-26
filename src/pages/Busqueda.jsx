@@ -1,7 +1,17 @@
-import { AppBar, Box, Container, createTheme, Link, styled, Toolbar, Typography } from "@mui/material"
+import { AppBar, Box, Container, createTheme, Link, styled, Toolbar, Typography, Paper, Grid, ThemeProvider } from "@mui/material"
 import SearchIcon from '@mui/icons-material/Search';
+import { dark } from "@mui/material/styles/createPalette";
 
-const Offset = styled('div')(({ theme }) => theme.mixins.toolbar)
+const Offset = styled('div')(({ theme }) => theme.mixins.toolbar);
+
+const Item = styled(Paper)(({ theme }) => ({
+    ...theme.typography.body3,
+    textAlign: 'center',
+    height: 60,
+    lineHeight: '60px',
+}))
+
+const darkTheme = createTheme({ palette: { mode: 'dark' } })
 
 export const Busqueda = () => {
     return (
@@ -17,8 +27,40 @@ export const Busqueda = () => {
                 </Toolbar>
             </AppBar>
             <Offset />
-            <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque repellendus ipsa sint pariatur nihil at asperiores iste ullam officia, quis qui assumenda exercitationem sit architecto error blanditiis omnis dolores quia.</h1>
-            <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque repellendus ipsa sint pariatur nihil at asperiores iste ullam officia, quis qui assumenda exercitationem sit architecto error blanditiis omnis dolores quia.</h1>
+            <Grid container spacing={2}>
+                <ThemeProvider theme={darkTheme}>
+                    <Grid item xs={6}>
+                        <Item elevation={3}>Shooter</Item>
+                    </Grid>
+                    <Grid item xs={6}>
+                        <Item elevation={3}>Peleas</Item>
+                    </Grid>
+                    <Grid item xs={6}>
+                        <Item elevation={3}>Rpg</Item>
+                    </Grid>
+                    <Grid item xs={6}>
+                        <Item elevation={3}>Carreras</Item>
+                    </Grid>
+                    <Grid item xs={6}>
+                        <Item elevation={3}>Estrategia</Item>
+                    </Grid>
+                    <Grid item xs={6}>
+                        <Item elevation={3}>Arcade</Item>
+                    </Grid>
+                    <Grid item xs={6}>
+                        <Item elevation={3}>Aventura</Item>
+                    </Grid>
+                    <Grid item xs={6}>
+                        <Item elevation={3}>Cartas</Item>
+                    </Grid>
+                    <Grid item xs={6}>
+                        <Item elevation={3}>Deportes</Item>
+                    </Grid>
+                    <Grid item xs={6}>
+                        <Item elevation={3}>Puzzle</Item>
+                    </Grid>
+                </ThemeProvider>
+            </Grid>
         </>
     )
 }
