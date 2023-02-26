@@ -1,6 +1,6 @@
 import { AppBar, Box, Container, createTheme, Link, styled, Toolbar, Typography, Paper, Grid, ThemeProvider } from "@mui/material"
 import SearchIcon from '@mui/icons-material/Search';
-import { dark } from "@mui/material/styles/createPalette";
+import { useNavigate } from "react-router-dom";
 
 const Offset = styled('div')(({ theme }) => theme.mixins.toolbar);
 
@@ -14,6 +14,9 @@ const Item = styled(Paper)(({ theme }) => ({
 const darkTheme = createTheme({ palette: { mode: 'dark' } })
 
 export const Busqueda = () => {
+
+    const navigate = useNavigate();
+
     return (
         <>
             <AppBar position='fixed'>
@@ -30,7 +33,7 @@ export const Busqueda = () => {
             <Grid container spacing={2}>
                 <ThemeProvider theme={darkTheme}>
                     <Grid item xs={6}>
-                        <Item elevation={3}>Shooter</Item>
+                        <Item onClick={() => navigate('/shooter')} elevation={3}>Shooter</Item>
                     </Grid>
                     <Grid item xs={6}>
                         <Item elevation={3}>Peleas</Item>

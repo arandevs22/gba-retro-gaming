@@ -3,6 +3,7 @@ import LayOutPublic from "../layout/LayOutPublic";
 import { Busqueda } from "../pages/Busqueda";
 import { Home } from "../pages/Home";
 import { Favoritos } from "../pages/Favoritos";
+import { Shooter } from "../pages/generos/Shooter";
 
 export const router = createBrowserRouter([
     {
@@ -20,6 +21,10 @@ export const router = createBrowserRouter([
             {
                 path: '/Favoritos',
                 element: <Favoritos />
+            },
+            {
+                path: '/shooter',
+                element: <Shooter />
             }
         ]
     },
