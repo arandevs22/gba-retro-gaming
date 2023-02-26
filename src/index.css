@@ -1,0 +1,17 @@
+html {
+    background-color: #121212;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.MuiBottomNavigation-root {
+    background-color: #232323 !important;
+}
+
+.MuiBottomNavigationAction-root {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.MuiBottomNavigationAction-root.Mui-selected {
+    color: #fff !important;
+}
