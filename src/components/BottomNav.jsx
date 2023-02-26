@@ -6,6 +6,10 @@ import SearchIcon from '@mui/icons-material/Search';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { styled } from "@mui/material";
+
+
+const Offset = styled('div')(({ theme }) => theme.mixins.toolbar);
 
 export default function BottomNav() {
 
@@ -40,6 +44,7 @@ export default function BottomNav() {
                     onClick={() => navigate('/favoritos')}
                 />
             </BottomNavigation>
+            <Offset />
         </>
     )
 }

@@ -1,12 +1,12 @@
-import { AppBar, Box, Container, createTheme, Link, Toolbar, Typography } from "@mui/material"
+import { AppBar, Box, Container, createTheme, Link, styled, Toolbar, Typography } from "@mui/material"
 import SearchIcon from '@mui/icons-material/Search';
 
-
+const Offset = styled('div')(({ theme }) => theme.mixins.toolbar)
 
 export const Busqueda = () => {
     return (
         <>
-            <AppBar position='sticky'>
+            <AppBar position='fixed'>
                 <Toolbar>
                     <Typography variant='h5' component='div' sx={{ flexGrow: 1 }}>
                         Buscar
@@ -16,6 +16,7 @@ export const Busqueda = () => {
                     </Link>
                 </Toolbar>
             </AppBar>
+            <Offset />
             <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque repellendus ipsa sint pariatur nihil at asperiores iste ullam officia, quis qui assumenda exercitationem sit architecto error blanditiis omnis dolores quia.</h1>
             <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque repellendus ipsa sint pariatur nihil at asperiores iste ullam officia, quis qui assumenda exercitationem sit architecto error blanditiis omnis dolores quia.</h1>
         </>
