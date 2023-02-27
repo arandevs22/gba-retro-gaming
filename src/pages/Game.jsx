@@ -17,7 +17,7 @@ export const Game = () => {
                 </div>
             </div>
             <Container>
-                <div className="uk-clearfix uk-margin-large-bottom">
+                <div className="uk-clearfix uk-margin-bottom">
                     <div className="uk-float-left">
                         <div>
                             <Typography variant="h5" color={'#fff'}>
@@ -32,7 +32,7 @@ export const Game = () => {
                     </div>
                 </div>
                 <div className="uk-text-center">
-                    <Button href={game.reference} variant='contained' size="large" startIcon={<VideogameAssetIcon />}>
+                    <Button fullWidth={true} href={game.reference} variant='contained' startIcon={<VideogameAssetIcon />}>
                         Jugar Ahora
                     </Button>
                 </div>
