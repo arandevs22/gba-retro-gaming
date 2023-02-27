@@ -5,6 +5,8 @@ import { Home } from "../pages/Home";
 import { Favoritos } from "../pages/Favoritos";
 import { loaderShooter, Shooter } from "../pages/generos/Shooter";
 import { Game } from "../pages/Game";
+import { loaderPlataforma, Plataforma } from "../pages/generos/Plataforma";
+import { loaderPeleas, Peleas } from "../pages/generos/Peleas";
 
 export const router = createBrowserRouter([
     {
@@ -24,9 +26,19 @@ export const router = createBrowserRouter([
                 element: <Favoritos />
             },
             {
-                path: '/shooter',
+                path: '/games/shooter',
                 element: <Shooter />,
                 loader: loaderShooter
+            },
+            {
+                path: '/games/plataforma',
+                element: <Plataforma />,
+                loader: loaderPlataforma
+            },
+            {
+                path: '/games/peleas',
+                element: <Peleas />,
+                loader: loaderPeleas
             },
             {
                 path: '/games/id/:id',

@@ -1,12 +1,12 @@
 import { AppBar, Container, styled, Toolbar, Typography, ImageList, ImageListItem, IconButton } from "@mui/material";
 import { Link, useLoaderData } from "react-router-dom";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 const Offset = styled('div')(({ theme }) => theme.mixins.toolbar);
 
-export const Shooter = () => {
+export const Plataforma = () => {
 
-    const { gamesShooter } = useLoaderData();
+    const { gamesPlataforma } = useLoaderData();
 
     const backButton = () => {
         history.back();
@@ -27,14 +27,14 @@ export const Shooter = () => {
                         <ArrowBackIcon />
                     </IconButton>
                     <Typography variant="h5" component='div' sx={{ flexGrow: 1 }}>
-                        Shooter
+                        Plataforma
                     </Typography>
                 </Toolbar>
             </AppBar>
             <Offset />
             <Container>
                 <ImageList gap={10} cols={3}>
-                    {gamesShooter.map((game) => (
+                    {gamesPlataforma.map((game) => (
                         <Link to={game.reference} key={game.poster}>
                             <ImageListItem>
                                 <img src={game.poster} alt={game.title} className='cover' loading='lazy' />
@@ -47,9 +47,9 @@ export const Shooter = () => {
     )
 }
 
-export const loaderShooter = async () => {
-    const res = await fetch(`https://apiretrogame-production.up.railway.app/api/games/game-boy-advance/shooter/`);
-    const gamesShooter = await res.json();
+export const loaderPlataforma = async () => {
+    const res = await fetch(`https://apiretrogame-production.up.railway.app/api/games/game-boy-advance/plataforma/`);
+    const gamesPlataforma = await res.json();
 
-    return { gamesShooter };
+    return { gamesPlataforma };
 }

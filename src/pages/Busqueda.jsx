@@ -33,34 +33,13 @@ export const Busqueda = () => {
             <Grid container spacing={2}>
                 <ThemeProvider theme={darkTheme}>
                     <Grid item xs={6}>
-                        <Item onClick={() => navigate('/shooter')} elevation={3}>Shooter</Item>
+                        <Item onClick={() => navigate('/games/shooter')} elevation={3}>Shooter</Item>
                     </Grid>
                     <Grid item xs={6}>
-                        <Item elevation={3}>Peleas</Item>
+                        <Item onClick={() => navigate('/games/plataforma')} elevation={3}>Plataforma</Item>
                     </Grid>
                     <Grid item xs={6}>
-                        <Item elevation={3}>Rpg</Item>
-                    </Grid>
-                    <Grid item xs={6}>
-                        <Item elevation={3}>Carreras</Item>
-                    </Grid>
-                    <Grid item xs={6}>
-                        <Item elevation={3}>Estrategia</Item>
-                    </Grid>
-                    <Grid item xs={6}>
-                        <Item elevation={3}>Arcade</Item>
-                    </Grid>
-                    <Grid item xs={6}>
-                        <Item elevation={3}>Aventura</Item>
-                    </Grid>
-                    <Grid item xs={6}>
-                        <Item elevation={3}>Cartas</Item>
-                    </Grid>
-                    <Grid item xs={6}>
-                        <Item elevation={3}>Deportes</Item>
-                    </Grid>
-                    <Grid item xs={6}>
-                        <Item elevation={3}>Puzzle</Item>
+                        <Item onClick={() => navigate('/games/peleas')} elevation={3}>Peleas</Item>
                     </Grid>
                 </ThemeProvider>
             </Grid>
