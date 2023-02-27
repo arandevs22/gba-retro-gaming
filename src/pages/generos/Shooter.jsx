@@ -18,7 +18,7 @@ export const Shooter = () => {
             </AppBar>
             <Offset />
             <Container>
-                <ImageList gap={20} cols={3}>
+                <ImageList gap={10} cols={3}>
                     {gamesShooter.map((game) => (
                         <Link to={game.reference} key={game.poster}>
                             <ImageListItem>
