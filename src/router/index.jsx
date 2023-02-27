@@ -3,7 +3,8 @@ import LayOutPublic from "../layout/LayOutPublic";
 import { Busqueda } from "../pages/Busqueda";
 import { Home } from "../pages/Home";
 import { Favoritos } from "../pages/Favoritos";
-import { Shooter } from "../pages/generos/Shooter";
+import { loaderShooter, Shooter } from "../pages/generos/Shooter";
+import { Game } from "../pages/Game";
 
 export const router = createBrowserRouter([
     {
@@ -24,7 +25,12 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/shooter',
-                element: <Shooter />
+                element: <Shooter />,
+                loader: loaderShooter
+            },
+            {
+                path: '/games/id/:id',
+                element: <Game />
             }
         ]
     },

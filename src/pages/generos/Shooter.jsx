@@ -1,9 +1,11 @@
-import { AppBar, Container, styled, Toolbar, Typography, Grid, Box, ImageList, ImageListItem, Link } from "@mui/material"
-import { shooterData } from "../../data/games";
+import { AppBar, Container, styled, Toolbar, Typography, Grid, Box, ImageList, ImageListItem } from "@mui/material";
+import { Link, useLoaderData } from "react-router-dom";
 
 const Offset = styled('div')(({ theme }) => theme.mixins.toolbar);
 
 export const Shooter = () => {
+
+    const { gamesShooter } = useLoaderData();
 
     return (
         <>
@@ -16,10 +18,10 @@ export const Shooter = () => {
             </AppBar>
             <Offset />
             <Container>
-                <ImageList cols={2}>
-                    {shooterData.map((game) => (
-                        <Link href={game.reference}>
-                            <ImageListItem key={game.poster}>
+                <ImageList gap={20} cols={3}>
+                    {gamesShooter.map((game) => (
+                        <Link to={game.reference} key={game.poster}>
+                            <ImageListItem>
                                 <img src={game.poster} alt={game.title} className='cover' loading='lazy' />
                             </ImageListItem>
                         </Link>
@@ -30,3 +32,9 @@ export const Shooter = () => {
     )
 }
 
+export const loaderShooter = async () => {
+    const res = await fetch(`https://apiretrogame-production.up.railway.app/api/games/game-boy-advance/shooter/`);
+    const gamesShooter = await res.json();
+
+    return { gamesShooter };
+}
