@@ -25,6 +25,23 @@ html {
     font-weight: bold !important;
 }
 
+.MuiTypography-root.year{
+    font-style: italic !important;
+}
+
+.MuiButton-root{
+    background-color: #bb86fc !important;
+    color: #121212 !important;
+}
+
 .cover {
     border-radius: 15px;
+}
+
+.color-text{
+    color: red;
+}
+
+.game-logo{
+    width: 250px;
 }

@@ -4,9 +4,15 @@ import { Busqueda } from "../pages/Busqueda";
 import { Home } from "../pages/Home";
 import { Favoritos } from "../pages/Favoritos";
 import { loaderShooter, Shooter } from "../pages/generos/Shooter";
-import { Game } from "../pages/Game";
+import { Game, loaderGame } from "../pages/Game";
 import { loaderPlataforma, Plataforma } from "../pages/generos/Plataforma";
 import { loaderPeleas, Peleas } from "../pages/generos/Peleas";
+import { loaderRpg, Rpg } from "../pages/generos/Rpg";
+import { Carreras, loaderCarreras } from "../pages/generos/Carreras";
+import { Deportes, loaderDeportes } from "../pages/generos/Deportes";
+import { Cartas, loaderCartas } from "../pages/generos/Cartas";
+import { Estrategia, loaderEstrategia } from "../pages/generos/Estrategia";
+import { BeatEmUp, loaderBeatEmUp } from "../pages/generos/BeatEmup";
 
 export const router = createBrowserRouter([
     {
@@ -41,8 +47,39 @@ export const router = createBrowserRouter([
                 loader: loaderPeleas
             },
             {
+                path: '/games/rpg',
+                element: <Rpg />,
+                loader: loaderRpg
+            },
+            {
+                path: '/games/carreras',
+                element: <Carreras />,
+                loader: loaderCarreras
+            },
+            {
+                path: '/games/deportes',
+                element: <Deportes />,
+                loader: loaderDeportes
+            },
+            {
+                path: '/games/cartas',
+                element: <Cartas />,
+                loader: loaderCartas
+            },
+            {
+                path: '/games/estrategia',
+                element: <Estrategia />,
+                loader: loaderEstrategia
+            },
+            {
+                path: '/games/beat-em-up',
+                element: <BeatEmUp />,
+                loader: loaderBeatEmUp
+            },
+            {
                 path: '/games/id/:id',
-                element: <Game />
+                element: <Game />,
+                loader: loaderGame
             }
         ]
     },

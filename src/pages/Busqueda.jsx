@@ -41,6 +41,24 @@ export const Busqueda = () => {
                     <Grid item xs={6}>
                         <Item onClick={() => navigate('/games/peleas')} elevation={3}>Peleas</Item>
                     </Grid>
+                    <Grid item xs={6}>
+                        <Item onClick={() => navigate('/games/rpg')} elevation={3}>RPG</Item>
+                    </Grid>
+                    <Grid item xs={6}>
+                        <Item onClick={() => navigate('/games/carreras')} elevation={3}>Carreras</Item>
+                    </Grid>
+                    <Grid item xs={6}>
+                        <Item onClick={() => navigate('/games/deportes')} elevation={3}>Deportes</Item>
+                    </Grid>
+                    <Grid item xs={6}>
+                        <Item onClick={() => navigate('/games/cartas')} elevation={3}>Cartas</Item>
+                    </Grid>
+                    <Grid item xs={6}>
+                        <Item onClick={() => navigate('/games/estrategia')} elevation={3}>Estrategia</Item>
+                    </Grid>
+                    <Grid item xs={6}>
+                        <Item onClick={() => navigate('/games/beat-em-up')} elevation={3}>Beat Em Up</Item>
+                    </Grid>
                 </ThemeProvider>
             </Grid>
         </>
