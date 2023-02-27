@@ -24,3 +24,7 @@ html {
 .MuiTypography-h5 {
     font-weight: bold !important;
 }
+
+.cover {
+    border-radius: 15px;
+}
