@@ -16,7 +16,7 @@ export const Shooter = () => {
             </AppBar>
             <Offset />
             <Container>
-                <ImageList cols={3}>
+                <ImageList cols={2}>
                     {shooterData.map((game) => (
                         <ImageListItem key={game.poster}>
                             <img src={game.poster} alt={game.title} className='cover' loading='lazy' />
