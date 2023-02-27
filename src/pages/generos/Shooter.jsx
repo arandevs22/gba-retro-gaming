@@ -1,4 +1,4 @@
-import { AppBar, Container, styled, Toolbar, Typography, Grid, Box, ImageList, ImageListItem } from "@mui/material"
+import { AppBar, Container, styled, Toolbar, Typography, Grid, Box, ImageList, ImageListItem, Link } from "@mui/material"
 import { shooterData } from "../../data/games";
 
 const Offset = styled('div')(({ theme }) => theme.mixins.toolbar);
@@ -18,9 +18,11 @@ export const Shooter = () => {
             <Container>
                 <ImageList cols={2}>
                     {shooterData.map((game) => (
-                        <ImageListItem key={game.poster}>
-                            <img src={game.poster} alt={game.title} className='cover' loading='lazy' />
-                        </ImageListItem>
+                        <Link href={game.reference}>
+                            <ImageListItem key={game.poster}>
+                                <img src={game.poster} alt={game.title} className='cover' loading='lazy' />
+                            </ImageListItem>
+                        </Link>
                     ))}
                 </ImageList>
             </Container>
