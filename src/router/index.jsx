@@ -13,6 +13,7 @@ import { Deportes, loaderDeportes } from "../pages/generos/Deportes";
 import { Cartas, loaderCartas } from "../pages/generos/Cartas";
 import { Estrategia, loaderEstrategia } from "../pages/generos/Estrategia";
 import { BeatEmUp, loaderBeatEmUp } from "../pages/generos/BeatEmup";
+import { loaderTopTen } from "../components/TopTen";
 
 export const router = createBrowserRouter([
     {
@@ -21,7 +22,8 @@ export const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                element: <Home />
+                element: <Home />,
+                loader: loaderTopTen
             },
             {
                 path: '/busqueda',
