@@ -9,11 +9,10 @@ export const Home = () => {
             <AppBar position='static'>
                 <Toolbar>
                     <Typography variant='h5' component='div' sx={{ flexGrow: 1 }}>
-                        Recomendados
+                        Inicio
                     </Typography>
                 </Toolbar>
             </AppBar>
-            <Recomendados />
             <TopTen />
         </>
     )

@@ -8,14 +8,14 @@ export const TopTen = () => {
     return (
         <>
             <Container>
-                <Typography variant="h5" color={'#fff'}>
+                <Typography className="uk-margin-small-top" variant="h5" color={'#fff'}>
                     Top 10
                 </Typography>
                 <ImageList gap={20} cols={2} className='uk-margin-right'>
                     {topTen.map((game) => (
                         <Link className="uk-link-reset" to={`/games/id/${game.id}`} key={game.poster}>
                             <ImageListItem>
-                                <img className="uk-margin-small-bottom" src={game.poster} alt={game.title} loading='lazy' />
+                                <img className="uk-margin-small-bottom cover" src={game.poster} alt={game.title} loading='lazy' />
                                 <Typography variant="body2" color={'gray'}>
                                     {game.title}
                                 </Typography>
