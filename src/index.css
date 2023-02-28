@@ -13,7 +13,7 @@ html {
 }
 
 .MuiBottomNavigationAction-root.Mui-selected {
-    color: #fff !important;
+    color: #bb86fc !important;
 }
 
 .MuiPaper-root.MuiAppBar-root {
@@ -48,9 +48,6 @@ html {
     border-radius: 15px;
 }
 
-.color-text{
-    color: red;
-}
 
 .game-logo{
     width: 250px;
