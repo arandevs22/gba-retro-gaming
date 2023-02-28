@@ -1,13 +1,35 @@
-import { Button, Container, Typography } from "@mui/material"
-import VideogameAssetIcon from '@mui/icons-material/VideogameAsset'
-import { useLoaderData } from "react-router-dom"
+import { Button, AppBar, Toolbar, Typography, Container, styled, IconButton } from "@mui/material";
+import VideogameAssetIcon from '@mui/icons-material/VideogameAsset';
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import { useLoaderData } from "react-router-dom";
+
+const Offset = styled('div')(({ theme }) => theme.mixins.toolbar);
 
 export const Game = () => {
 
     const { game } = useLoaderData();
 
+    const backButton = () => {
+        history.back();
+    }
+
     return (
         <>
+            <AppBar position="fixed">
+                <Toolbar>
+                    <IconButton
+                        size="large"
+                        edge="start"
+                        color="inherit"
+                        aria-label="back"
+                        sx={{ mr: 2 }}
+                        onClick={backButton}
+                    >
+                        <ArrowBackIcon sx={{ fontSize: 30 }} />
+                    </IconButton>
+                </Toolbar>
+            </AppBar>
+            <Offset />
             <div className="uk-position-relative">
                 <div className="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-primary uk-margin-bottom" data-src={game.background} data-uk-img="loading: eager">
                 </div>

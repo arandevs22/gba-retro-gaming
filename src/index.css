@@ -21,6 +21,12 @@ html {
     box-shadow: none !important;
 }
 
+.gameBar {
+    background-color: #121212 !important;
+    box-shadow: none !important;
+    opacity: 0;
+}
+
 .MuiTypography-h5 {
     font-weight: bold !important;
 }
