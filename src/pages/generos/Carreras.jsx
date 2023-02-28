@@ -24,7 +24,7 @@ export const Carreras = () => {
                         sx={{ mr: 2 }}
                         onClick={backButton}
                     >
-                        <ArrowBackIcon />
+                        <ArrowBackIcon sx={{ fontSize: 30 }} />
                     </IconButton>
                     <Typography variant="h5" component='div' sx={{ flexGrow: 1 }}>
                         Carreras
