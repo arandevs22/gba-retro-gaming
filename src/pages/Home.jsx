@@ -13,6 +13,7 @@ export const Home = () => {
                     </Typography>
                 </Toolbar>
             </AppBar>
+            <Recomendados />
             <TopTen />
         </>
     )
