@@ -1,20 +1,19 @@
 import { AppBar, styled, Toolbar, Typography } from "@mui/material";
+import { Recomendados } from "../components/Recomendados";
 import { TopTen } from "../components/TopTen";
 
-
-const Offset = styled('div')(({ theme }) => theme.mixins.toolbar);
 
 export const Home = () => {
     return (
         <>
-            <AppBar position='fixed'>
+            <AppBar position='static'>
                 <Toolbar>
                     <Typography variant='h5' component='div' sx={{ flexGrow: 1 }}>
-                        Inicio
+                        Recomendados
                     </Typography>
                 </Toolbar>
             </AppBar>
-            <Offset />
+            <Recomendados />
             <TopTen />
         </>
     )

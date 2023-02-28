@@ -40,6 +40,10 @@ html {
     color: #121212 !important;
 }
 
+.uk-grid.slide-cover {
+    margin-right: -50px;
+  }
+
 .cover {
     border-radius: 15px;
 }
